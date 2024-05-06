@@ -1,0 +1,139 @@
+body {
+  font-family: 'Pacifico', cursive;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: -webkit-linear-gradient(left, #003366,#004080,#0059b3
+  , #0073e6); /* Dark Gray background color */
+  color: #ffffff; /* White text color */
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+  animation: fadeIn 1s ease-in-out;
+  background-color: #6366f1;
+}
+
+.container {
+  text-align: center;
+  animation: fadeIn 1s ease-in-out;
+  background-color: #6366f1;
+}
+
+.app-title {
+  font-size: 48px;
+  font-family: 'Pacifico', cursive;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  animation: bounce 2s infinite alternate, colorChange 5s infinite alternate;
+  color: white; /* Orange color */
+}
+
+@keyframes bounce {
+  0% {
+      transform: translateY(-5px);
+  }
+  100% {
+      transform: translateY(5px);
+  }
+}
+
+
+
+@keyframes colorChange {
+  0%, 100% {
+      color: white;
+  }
+  25% {
+      color: white;
+  }
+  50% {
+      color: white;
+  }
+  75% {
+      color: white;
+  }
+}
+
+.welcome-heading {
+  font-size: 28px;
+  color: #67e8f9;
+  padding: 5px;
+}
+
+.tagline {
+  font-size: 18px;
+  color: #ffffff;
+  font-style: italic;
+  padding: 5px;
+}
+
+.animated-letter {
+  display: inline-block;
+  animation: bounce 1s infinite alternate;
+}
+
+.get-started-button {
+  display: inline-block;
+  padding: 15px 30px;
+  font-size: 20px;
+  background-color: #67e8f9;
+  color: #0e7490;
+  text-decoration: none;
+  transition: background-color 0.3s, transform 0.3s;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.get-started-button:hover {
+  background-color: #a5f3fc;
+  transform: scale(1.1);
+}
+
+@media screen and (max-width: 768px) {
+  body {
+      background-color: #6366f1;
+  }
+  .app-title {
+      font-size: 36px;
+  }
+  .welcome-heading {
+      font-size: 24px;
+  }
+  .tagline {
+      font-size: 16px;
+  }
+  .get-started-button {
+      font-size: 20px;
+  }
+  .zoom-image {
+      max-width: 150px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  body {
+      background-color: #6366f1;
+  }
+  .app-title {
+      font-size: 30px;
+  }
+  .welcome-heading {
+      font-size: 20px;
+  }
+  .tagline {
+      font-size: 14px;
+  }
+  .get-started-button {
+      font-size: 18px;
+     
+  }
+  .zoom-image {
+      max-width: 120px;
+  }
+}
+.ear-icon {
+  margin-right: 10px; /* Adjust the margin to position the ear icon as needed */
+  color: white; /* Color of the ear icon */
+}

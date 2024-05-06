@@ -1,0 +1,258 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    background-color: #f0f0f0; /* Background color for the entire page */
+}
+
+#audiogramContainer {
+    text-align: center;
+    background-color: #fff; /* Background color for the audiogram container */
+    padding: 20px;
+    border-radius: 10px; /* Rounded corners for the container */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2); /* Box shadow for a subtle lift */
+    max-width: 800px;
+}
+
+h2 {
+    background-color: #007bff; /* Blue color for the h1 tag */
+    color: white;
+    padding: 5px;
+    border-radius: 10px;
+    margin-top: 0;
+}
+
+#audiogramCanvas {
+    background-color: #f0f0f0; /* Background color for the graph area */
+    border: 1px solid #ccc;
+    margin: 30px auto; /* Center the graph horizontally */
+    display: block;
+}
+
+/* X-axis label styling */
+#x-axis-label {
+    font-size: 14px;
+    font-weight: bold;
+    fill: black;
+    text-anchor: middle; /* Center-align text */
+    dominant-baseline: hanging; /* Position below the x-axis */
+}
+
+/* Y-axis label styling */
+#y-axis-label {
+    font-size: 14px;
+    font-weight: bold;
+    fill: black;
+    text-anchor: middle; /* Center-align text */
+    dominant-baseline: middle; /* Center vertically */
+    transform: rotate(-90deg); /* Rotate text for y-axis */
+    transform-origin: center; /* Rotate around the center */
+}
+
+/* Frequency label styling on x-axis */
+.frequency-label {
+    font-size: 12px;
+    font-weight: bold;
+    fill: black;
+    text-anchor: middle; /* Center-align text */
+    dominant-baseline: hanging; /* Position below the x-axis */
+}
+
+/* Threshold label styling on y-axis */
+.threshold-label {
+    font-size: 12px;
+    font-weight: bold;
+    fill: black;
+    text-anchor: end; /* Align to the end (right) of the y-axis */
+    dominant-baseline: middle; /* Center vertically */
+    padding-right: 5px; /* Add some padding to the right */
+}
+
+#graph-title {
+    font-size: 24px;
+    font-weight: bold;
+    color: #007bff; /* Blue color for the graph title */
+    margin-bottom: 20px;
+}
+#graph-title1 {
+    font-size: 24px;
+    font-weight: bold;
+    color:red; /* Blue color for the graph title */
+    margin-bottom: 20px;
+}
+
+/* Add this CSS to make buttons more appealing */
+/* Add this CSS to style the rounded button */
+.rounded-button {
+    width: 100px;
+    height: 100px;
+    background-color: #007bff;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.rounded-button::before {
+    content: ""; /* Empty content for no text */
+    width: 30px;
+    height: 30px;
+    background-color: white;
+    border-radius: 50%;
+}
+
+.message-box {
+    display: none;
+    border: 2px solid #007bff;
+    padding: 20px;
+    margin: 20px;
+    text-align: center;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+.message-box p {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.message-box button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+}
+
+/* Additional styling for the "You Are Normal" message box */
+#doctor1 {
+    background-color: #4caf50; /* Green background for this message box */
+    border-color: #4caf50;
+}
+
+/* Hover effect for the button */
+.message-box button:hover {
+    background-color: #0056b3;
+}
+.registration-details {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px;
+}
+
+.registration-details p {
+    margin: 0;
+}
+
+.registration-details strong {
+    font-weight: bold;
+}
+@media (max-width: 767px) {
+    /* Responsive styles for smaller screens */
+    h1 {
+        text-align: center;
+    }
+
+    /* Add a simple navigation bar */
+    nav {
+        background-color: #007bff;
+        color: white;
+        text-align: center;
+        padding: 10px;
+    }
+
+    nav ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    nav ul li {
+        display: inline;
+        margin-right: 20px;
+    }
+
+    #audiogramContainer {
+        text-align: center;
+        padding: 10px;
+        border-radius: 10px;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    #graph-title {
+        font-size: 20px;
+        font-weight: bold;
+        color: #007bff;
+        margin-bottom: 10px;
+    }
+
+    #audiogramCanvas {
+        background-color: #f0f0f0;
+        border: 1px solid #ccc;
+        margin: 10px auto;
+        display: block;
+    }
+
+    /* Other mobile styles */
+}
+#downloadPdfButton{
+display: inline-block;
+padding: 15px 30px;
+font-size: 20px;
+background-color:red;
+color:white;
+text-decoration: none;
+transition: background-color 0.3s, transform 0.3s;
+box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+   
+}
+.rectangle-button {
+  background-color: #3498db; /* Blue background color */
+  color: white; /* White text color */
+  border: none; /* No border */
+  border-radius: 5px; /* Rounded corners */
+  padding: 10px 20px; /* Padding inside the button */
+  text-align: center; /* Center the text horizontally */
+  text-decoration: none; /* Remove underline from text */
+  display: inline-block; /* Display as an inline element (prevents full-width) */
+  font-size: 16px; /* Text size */
+  margin: 4px 10px 4px 0; /* Margin between buttons, including right margin to create space */
+  cursor: pointer; /* Cursor on hover */
+}
+
+/* Change background color on hover for rectangle button */
+.rectangle-button:hover {
+  background-color: #2980b9; /* Darker blue on hover */
+}
+
+/* Basic button styles for a rounded button */
+.rounded-button {
+  background-color: #4CAF50; /* Green background color */
+  color: white; /* White text color */
+  border: none; /* No border */
+  border-radius: 25px; /* Rounded corners */
+  padding: 10px 20px; /* Padding inside the button */
+  text-align: center; /* Center the text horizontally */
+  text-decoration: none; /* Remove underline from text */
+  display: inline-block; /* Display as an inline element (prevents full-width) */
+  font-size: 16px; /* Text size */
+  margin: 4px 0; /* Margin between buttons */
+  cursor: pointer; /* Cursor on hover */
+  width: 100px;
+  height: 50px;
+}
+
+/* Change background color on hover for rounded button */
+.rounded-button:hover {
+  background-color: #45a049; /* Darker green on hover */
+}
