@@ -1,0 +1,139 @@
+/* General styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    margin: 0;
+    padding: 0;
+    overflow-y: scroll;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    text-align: center; /* Center text in container */
+}
+
+.container h1 {
+    color: #115e59;
+    margin: 20px 0; /* Margin for spacing */
+}
+
+.left-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+/* Style for the individual sets of headings and paragraphs */
+.left-content div {
+    margin: 20px 0;
+    width: 100%; /* Full width of the parent container */
+    text-align: center; /* Center align text */
+}
+
+.left-content div img {
+    max-width: 100%;
+    height: auto;
+}
+
+.left-content div h1 {
+    font-size: 24px;
+    color: #115e59;
+    margin-top: 10px;
+}
+
+.left-content div p {
+    font-size: 18px;
+    color: #666;
+}
+
+/* Media queries for responsiveness */
+@media screen and (min-width: 768px) {
+    .left-content {
+        flex-direction: row;
+        justify-content: space-between; /* Align items with space between them */
+    }
+
+    .left-content div {
+        flex: 1;
+        margin: 0;
+        padding: 20px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+    }
+
+    .left-content div:hover {
+        background-color: #f0f0f0;
+    }
+
+    .left-content div h1 {
+        font-size: 24px;
+    }
+
+    .left-content div p {
+        font-size: 18px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .container {
+        padding: 10px; /* Adjust padding for mobile */
+    }
+
+    .left-content {
+        flex-direction: column; /* Stack items vertically on mobile */
+    }
+
+    .left-content div {
+        width: 100%;
+        margin: 10px 0; /* Margin adjustments for mobile */
+        padding: 10px; /* Padding adjustments for mobile */
+        border: none; /* Remove border for mobile */
+        border-radius: 0; /* Remove rounded corners for mobile */
+        text-align: center; /* Center text */
+    }
+
+    .left-content div img {
+        max-width: 80%; /* Scale image to fit on mobile */
+        height: auto;
+        margin: 0 auto; /* Center image horizontally */
+    }
+
+    .left-content div h1 {
+        font-size: 20px; /* Smaller font size for mobile */
+    }
+
+    .left-content div p {
+        font-size: 16px; /* Smaller font size for mobile */
+    }
+
+    .container h1 {
+        font-size: 24px; /* Ensure font size is large enough */
+        color: #115e59; /* Ensure the color is visible */
+    }
+}
+
+.next-button {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.next-button a {
+    display: inline-block;
+    padding: 15px 30px;
+    font-size: 20px;
+    background-color: #115e59;
+    color: white;
+    text-decoration: none;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+@media screen and (max-width: 767px) {
+    .next-button a {
+        padding: 10px 20px; /* Adjust padding for mobile */
+        font-size: 18px; /* Smaller font size for mobile */
+    }
+}

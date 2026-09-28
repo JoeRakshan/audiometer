@@ -1,0 +1,66 @@
+.four{
+    background-color: white;
+    width: 100%;
+    padding: 20px;
+}
+h1{
+    color:black;
+    padding: 5px;
+}
+.card {
+    background-color: #fb7185;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin: 20px;
+    border-radius: 10px;
+}
+.card1 {
+    background-color:#93c5fd;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin: 20px;
+}
+
+/* Card image styles */
+.card img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+.card1 img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+.start-button1{
+background-color:#e11d48;
+color: #fff;
+padding: 10px 20px;
+border: none;
+text-decoration: none;
+cursor: pointer;
+font-size: 16px;
+transition: background-color 0.3s ease;
+}
+.start-button{
+background-color: #007BFF;
+color: #fff;
+padding: 10px 20px;
+border: none;
+text-decoration: none;
+cursor: pointer;
+font-size: 16px;
+transition: background-color 0.3s ease;
+}
+p{
+font-size: 20px;
+padding: 10px;
+color: black;
+}
+h2{
+    font-size: x-large;
+    color:black;
+}
+.right{
+background:#e11d48;
+}
